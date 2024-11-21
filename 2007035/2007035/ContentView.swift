@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var expenses: [Expense] = []
     @State private var showAddExpenseView: Bool = false
 
-    // Group expenses by date
+    
     private var groupedExpenses: [String: [Expense]] {
         Dictionary(grouping: expenses) { expense in
             let formatter = DateFormatter()
@@ -20,7 +20,7 @@ struct ContentView: View {
         }
     }
 
-    // Calculate total expense for each date
+    
     private var dailyTotals: [(date: String, total: Double)] {
         groupedExpenses.map { (date, expenses) in
             (date, expenses.reduce(0) { $0 + $1.amount })
@@ -30,10 +30,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                // Scrollable container for daily totals and detailed expenses
+                
                 ScrollView {
                     VStack {
-                        // Daily Totals Section
+                        
                         if !dailyTotals.isEmpty {
                             Section(header: Text("Daily Totals").font(.headline)) {
                                 ForEach(dailyTotals, id: \.date) { total in
@@ -50,7 +50,7 @@ struct ContentView: View {
                             .padding()
                         }
 
-                        // Detailed Expense List
+                       
                         if expenses.isEmpty {
                             Spacer()
                             Text("No expenses yet!")
@@ -99,7 +99,7 @@ struct ContentView: View {
         }
     }
 
-    // Delete an expense from a specific date group
+    
     private func deleteExpense(in date: String, at offsets: IndexSet) {
         if let expensesForDate = groupedExpenses[date] {
             let idsToDelete = offsets.map { expensesForDate[$0].id }
