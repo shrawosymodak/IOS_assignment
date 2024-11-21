@@ -9,6 +9,9 @@ Section : A2
 
 Project name : Expense Tracker
 
+
+
+
 Features :
 
 1.Add Expenses: Users can input an expense title, amount, and date using a dedicated form.
@@ -23,11 +26,16 @@ Features :
 
 6.Dynamic Updates: The list updates dynamically as new expenses are added or removed.
 
+
+
+
 Description in Short:
 
 This is a simple SwiftUI-based expense tracking app that allows users to manage their daily expenses. 
 Users can add expenses with details like title, amount, and date, view grouped expenses by date with calculated daily totals, and delete specific entries.
  The app ensures input validation and provides a clean and user-friendly interface.
+
+
 
 
 Technologies Used in the Project:
