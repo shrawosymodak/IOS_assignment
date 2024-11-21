@@ -1,0 +1,15 @@
+# macOS system files
+.DS_Store
+._* 
+
+# Xcode project files
+*.xcuserdatad
+*.xcuserdata
+*.xcworkspace
+
+# Build artifacts
+DerivedData/
+build/
+
+# Logs
+*.log
